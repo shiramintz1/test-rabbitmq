@@ -24,4 +24,3 @@ if __name__ == "__main__":
     host = os.getenv("RABBITMQ_HOST", "localhost")
     p = Producer(queue_name="my_queue", host=host, port=5672, username="guest", password="guest")
     p.publish({"msg": "Hello from Docker!"})
-    

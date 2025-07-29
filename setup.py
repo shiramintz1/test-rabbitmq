@@ -10,4 +10,3 @@ setup(
     description='A simple RabbitMQ wrapper with Producer, Consumer and Connection',
     python_requires='>=3.7',
 )
-
