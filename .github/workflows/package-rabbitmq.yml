@@ -1,5 +1,9 @@
 name: Build RabbitMQ Package
 
+permissions:
+  contents: read
+  actions: write
+
 on:
   push:
     branches:
@@ -46,4 +50,4 @@ jobs:
         uses: kolpav/purge-artifacts-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          expire-in: 2
+          keep-last: 2
