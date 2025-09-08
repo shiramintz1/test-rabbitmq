@@ -19,7 +19,7 @@ class Consumer:
         def internal_callback(ch, method, properties, body):
             try:
                 message = json.loads(body)
-                print(f"[Consumer] Received message: {message}")
+                print(f"[Consumer] Received message: {message}!!")
                 self.callback(message)
                 ch.basic_ack(delivery_tag=method.delivery_tag)
                 print("[Consumer] Message acknowledged")
