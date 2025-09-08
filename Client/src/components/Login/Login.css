@@ -1,0 +1,209 @@
+.login-title {
+    margin-bottom: 24px !important;
+    font-weight: 600 !important;
+    font-size: 40px !important;
+}
+
+.login-container {
+    height: 100vh !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-family: 'Rubik', sans-serif !important;
+    padding: 16px !important;
+}
+
+.login-box {
+    width: 100% !important;  
+    max-width: 622.49px !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 50px !important;
+    align-items: center !important;
+}
+
+.input-wrapper {
+    position: relative !important;
+    width: 100% !important;
+}
+
+.input-field {
+    background-color: #B8C8E8 !important;
+    width: 622.49px !important;
+    height: 123px !important;
+    color: #49454F !important;
+}
+
+.input-field .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border: none !important;
+}
+
+.input-field .MuiInputBase-root {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+}
+
+.input-field .MuiInputBase-input {
+    color: #49454F !important;
+    padding: 42px 12px !important;
+    font-size: 16px !important;
+}
+
+.input-field .MuiInput-underline:before {
+    border-bottom: 1px solid black !important;
+}
+
+.input-field .MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom: 1px solid black !important;
+}
+
+.input-field .MuiInputLabel-root {
+    margin-left: 15px !important;
+}
+
+.input-icon {
+    position: absolute !important;
+    top: 8px !important;
+    right: 12px !important;
+    width: 24px !important;
+    height: 24px !important;
+    z-index: 1 !important;
+}
+
+.buttons-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 622.49px !important;
+    margin-top: 12px !important;
+    gap: 16px !important;
+}
+
+.signin-button,
+.forgot-button {
+    height: 40px !important;
+    width: calc(50% - 8px) !important;
+    max-width: 300px !important;
+}
+
+.signin-button {
+    background-color: #C53A8B !important;
+    color: black !important;
+    font-family: 'Rubik', sans-serif !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border: 1px solid #79747E !important;
+}
+
+.forgot-button {
+    position: relative !important;
+    background-color: #ffffff !important;
+    color: #000 !important;
+    font-family: 'Rubik', sans-serif !important;
+    border: 1px solid #000 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.forgot-button::before,
+.forgot-button::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;            
+    background-color: #C53A8B !important; 
+}
+
+.forgot-button::before {
+    top: 0 !important;
+}
+
+.forgot-button::after {
+    bottom: 0 !important;
+}
+
+.custom-dialog .MuiPaper-root {
+    background-color: #f3ecf8 !important;
+    border-radius: 20px !important;
+    padding: 24px !important;
+    width: 90% !important;       
+    max-width: 550px !important;
+    font-family: 'Rubik', sans-serif !important;
+    box-shadow: none !important;
+}
+
+.dialog-title {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    color: #1D1B20 !important;
+    position: relative !important;
+    padding-right: 32px !important;
+}
+
+.dialog-content {
+    padding: 16px 0 !important;
+}
+
+.dialog-text {
+    font-size: 14px !important;
+    color: #49454F !important;
+}
+
+.dialog-actions {
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.cancel-button {
+    color: #6750A4 !important;
+    text-transform: lowercase !important;
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+}
+
+.dialog-close-button {
+    position: absolute !important;
+    right: 8px !important;
+    top: 8px !important;
+    color: #1D1B20 !important;
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    gap: 16px !important;
+  }
+
+  .input-field {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100px !important;
+  }
+
+  .signin-button,
+  .forgot-button {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 12px !important;
+    height: 36px !important;
+  }
+
+  .buttons-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .dialog-title {
+    font-size: 16px !important;
+  }
+
+  .dialog-text {
+    font-size: 12px !important;
+  }
+}

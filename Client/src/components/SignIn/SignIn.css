@@ -1,0 +1,159 @@
+body {
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --background: #FBFBFB;
+  --input-background: #B8C8E8;
+  --text-color: #49454F;
+  --button-background: #C53A8B;
+}
+
+.sign-in-title {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.25px;
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
+}
+
+.sign-in-form {
+  margin-top: 8rem;
+}
+
+.button {
+  width: 18rem;
+  height: 3rem;
+  color: #000 !important;
+  padding: 0;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 1rem;
+}
+
+.register-button {
+  background-color: var(--button-background) !important;
+  color: #1D1B20 !important;
+}
+
+.haveAccount-button {
+  position: relative;
+  background-color: #fff !important;
+  border: 1px solid #000 !important;
+  color: #000 !important;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+}
+
+.haveAccount-button::before,
+.haveAccount-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #C53A8B;
+}
+
+.haveAccount-button::before {
+  top: 0;
+}
+
+.haveAccount-button::after {
+  bottom: 0;
+}
+
+.text-field {
+  position: relative;
+  width: 100%;
+  max-width: 38.9rem;
+  height: 7.7rem;
+  background-color: var(--input-background) !important;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding: 0.25rem 1rem;
+  overflow: hidden;
+}
+
+.text-field:focus-within {
+  border: 1px solid var(--button-background) !important;
+  border-bottom: none !important;
+}
+
+.text-field:focus-within::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background-color: #49454F;
+}
+
+.text-field.Mui-error {
+  border: 1px solid var(--button-background) !important;
+  border-bottom: none !important;
+}
+
+.text-field.Mui-error::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2px;
+  background-color: #49454F;
+}
+
+.text-field .MuiFilledInput-root {
+  background-color: var(--input-background) !important;
+  border-radius: 4px !important;
+  height: 100%;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+  padding-left: 0;
+}
+
+.text-field .MuiFilledInput-root:hover,
+.text-field .MuiFilledInput-root.Mui-focused {
+  background-color: var(--input-background) !important;
+}
+
+.text-field .MuiInputLabel-root {
+  color: var(--text-color) !important;
+  font-size: 1.25rem !important;
+}
+
+.text-field .MuiFilledInput-input {
+  color: var(--text-color) !important;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  font-size: 1rem;
+}
+
+.text-field .MuiFilledInput-underline:before,
+.text-field .MuiFilledInput-underline:after {
+  border-bottom: none !important;
+}
+
+.input-icon {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+}

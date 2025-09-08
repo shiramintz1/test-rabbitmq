@@ -1,0 +1,48 @@
+name: Build RabbitMQ Package
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "RabbitMQ/**"
+      - "setup.py"
+      - "pyproject.toml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build tools
+        run: pip install build
+
+      - name: Clean old builds
+        run: rm -rf dist
+
+      - name: Build package
+        run: python -m build
+
+      - name: Upload package as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rabbitmq-package
+          path: dist/*
+
+  cleanup:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Delete old artifacts
+        uses: kolpav/purge-artifacts-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          expire-in: 2

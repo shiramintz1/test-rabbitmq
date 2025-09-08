@@ -1,0 +1,1 @@
+# rabbitmq_producer.py

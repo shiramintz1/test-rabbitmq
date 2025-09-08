@@ -1,0 +1,86 @@
+name: Python Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      # Running in the server folder
+      - name: Install dependencies (server)
+        working-directory: server
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest-mock pytest-asyncio
+
+      - name: Run tests (server)
+        working-directory: server
+        run: |
+          export PYTHONPATH=.
+          pytest
+
+      # Running in the dispatch_service folder
+      - name: Install dependencies (dispatch_service)
+        working-directory: dispatch_service
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest-mock pytest-asyncio
+
+      - name: Run tests (dispatch_service)
+        working-directory: dispatch_service
+        run: |
+          export PYTHONPATH=.
+          pytest || true
+
+      # Running in the ingestion_service folder
+      - name: Install dependencies (ingestion_service)
+        working-directory: ingestion_service
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest-mock pytest-asyncio
+
+      - name: Run tests (ingestion_service)
+        working-directory: ingestion_service
+        run: |
+          export PYTHONPATH=.
+          pytest || true
+
+      # Running in the processing_service folder
+      - name: Install dependencies (processing_service)
+        working-directory: processing_service
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest-mock pytest-asyncio
+
+      - name: Run tests (processing_service)
+        working-directory: processing_service
+        run: |
+          export PYTHONPATH=.
+          pytest || true
+
+      # Running in the tracking_service folder
+      - name: Install dependencies (tracking_service)
+        working-directory: tracking_service
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest-mock pytest-asyncio
+
+      - name: Run tests (tracking_service)
+        working-directory: tracking_service
+        run: |
+          export PYTHONPATH=.
+          pytest || true

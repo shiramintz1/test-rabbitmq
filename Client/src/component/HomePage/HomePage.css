@@ -1,0 +1,41 @@
+.page-container {
+    min-height: 100vh;
+    background-color:  #EFB8C8;
+    display: flex;
+    flex-direction: column;
+}
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 24px;
+}
+.main-image {
+    width: 90%;
+    max-width: 1110px;
+    height: auto;
+}
+.login-button {
+    width: 267px;
+    height: 48px;
+    background-color: #E7C8E4 !important;
+    color: black !important;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: none !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    border: M3/sys/light/outline 1px solid !important;
+}
+.my-outline-box {
+  border: 1px solid #79747E; /* outline של Material 3 */
+  border-radius: 12px;
+  padding: 16px;
+}
+.login-button:hover {
+    background-color: #b998bf !important;
+    box-shadow: none !important;
+}
