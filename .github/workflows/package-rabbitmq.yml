@@ -41,13 +41,3 @@ jobs:
         with:
           name: rabbitmq-package
           path: RabbitMQ/dist/*
-
-  cleanup:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Delete old artifacts
-        uses: kolpav/purge-artifacts-action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          keep-last: 2
