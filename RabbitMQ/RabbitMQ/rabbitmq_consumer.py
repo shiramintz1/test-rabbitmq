@@ -22,7 +22,7 @@ class Consumer:
                 print(f"[Consumer] Received message: {message}")
                 self.callback(message)
                 ch.basic_ack(delivery_tag=method.delivery_tag)
-                print("[Consumer] Message acknowledged")
+                print("[Consumer] Message acknowledged!!!!!!")
             except Exception as e:
                 print(f"[Consumer] Error handling message: {e}")
                 self.channel.basic_publish(
