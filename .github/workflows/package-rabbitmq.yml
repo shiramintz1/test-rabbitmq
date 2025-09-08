@@ -28,14 +28,15 @@ jobs:
       - name: Clean old builds
         run: rm -rf dist
 
-      - name: Build package
+      - name: Build RabbitMQ package
+        working-directory: RabbitMQ
         run: python -m build
 
       - name: Upload package as artifact
         uses: actions/upload-artifact@v4
         with:
           name: rabbitmq-package
-          path: dist/*
+          path: RabbitMQ/dist/*
 
   cleanup:
     runs-on: ubuntu-latest
